@@ -22,16 +22,21 @@ public class SnakeAndLadder {
             case 2:
                 System.out.println("Ladder:" + (RollDice + positionFirstPlayer));
                 System.out.println("Player moves ahead by: " + RollDice);
+                positionFirstPlayer=positionFirstPlayer+RollDice;
                 break;
             case 3:
                 System.out.println("Snake:" + (RollDice + positionFirstPlayer));
                 System.out.println("Player moves behind :" + RollDice);
+                positionFirstPlayer=positionFirstPlayer-RollDice;
                 break;
         }
         if (positionFirstPlayer<0){
             positionFirstPlayer=0;
         }
-                System.out.println();
+                if (positionFirstPlayer > 100) {
+                    positionFirstPlayer -=RollDice;
+                    System.out.println();
+                }
         }
         }
         System.out.println("Player 1 reached the winning position 100");
