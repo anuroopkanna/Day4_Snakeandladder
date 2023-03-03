@@ -6,13 +6,13 @@ public class SnakeAndLadder {
     public static void main(String[] args) {
         System.out.println("Welcome to The  Snake and Ladder game");
         System.out.println("Single Player at Start Position 0");
-        int positionFirstPlayer=0;
+        int positionFirstPlayer=0,count=0;
         boolean currentTurn=true;
         while (positionFirstPlayer!=100){
             if (currentTurn==true){
                 System.out.println("Player1 currently at position" +positionFirstPlayer);
         int RollDice=(int)(Math.random()*6+1);
-        System.out.println("Player 1 rolls the dies and get:" +RollDice);
+        System.out.println("Dice rolls by:" +RollDice);
         int currentOption=(int)(Math.random()*3+1);
         switch (currentOption) {
             case 1:
@@ -35,10 +35,11 @@ public class SnakeAndLadder {
         }
                 if (positionFirstPlayer > 100) {
                     positionFirstPlayer -=RollDice;
-                    System.out.println();
                 }
+                System.out.println();
         }
         }
+        System.out.println("First Player Rolled Dice" +count+"times");
         System.out.println("Player 1 reached the winning position 100");
     }
 }
